@@ -1,0 +1,25 @@
+<div *ngIf="page">
+    <div class="row">
+        <div *ngIf="errorMsg" class="alert alert-danger">
+            {{errorMsg}}
+        </div>
+
+
+        <div *ngFor="let item of page.items" class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                <a href="#" routerLink="/category/{{id}}/item/{{item.itemId}}"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <div class="card-body">
+                    <h4 class="card-title"><a href="#" routerLink="/category/{{id}}/item/{{item.itemId}}">{{item.name}}</a></h4>
+                    <h5>{{item.price | currency: 'USD' : true}}</h5>
+                    <p class="card-text">{{item.descr}}</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--<a href="<spring:url value="/books?page=${page.number - 1}"/>">Previous</a>-->
+<!--<a href="<spring:url value="/books?page=${page.number + 1}"/>">Next</a>-->

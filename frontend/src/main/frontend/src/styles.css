@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 56px;
+    }
+}
+
+.navbar-color {
+    background-color: #F8F8F8;
+    border-color: #E7E7E7;
+}
